@@ -1,6 +1,6 @@
 # Barista-Matic
 
-Built with React & Google Firebase
+An experiment in serverless app development, built with React & Google Firebase cloud functions.
 
 - Simulate dispensing drinks
 - Every drink purchased affects the inventory of ingredients
