@@ -189,7 +189,7 @@ exports.addDrink = functions.https.onRequest((request, response) => {
         const newDocument = {
           ...customDrinkInfo,
           link,
-          image: 'https://i.imgur.com/5knK83u.jpg',
+          image: process.env.NEW_DRINK_IMAGE,
           custom_drink: true,
         };
 
