@@ -5,7 +5,7 @@ let db = admin.firestore();
 const functions = require('firebase-functions');
 const config = functions.config();
 
-const cors = require('cors')({ origin: process.env.ORIGIN });
+const cors = require('cors')({ origin: true });
 const stripeKey = config.stripe.key;
 const stripe = require('stripe')(stripeKey);
 
