@@ -39,7 +39,7 @@ const PaymentForm = (props) => {
       }
 
       const res = await axios.post(
-        `${process.env.BASE_URL}/stripePayment`,
+        `${process.env.REACT_APP_BASE_URL}/stripePayment`,
         {
           amount: Math.round(total * 100),
         }

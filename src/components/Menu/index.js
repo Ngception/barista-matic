@@ -19,10 +19,10 @@ const Menu = () => {
       axios
         .all([
           axios.get(
-            `${process.env.BASE_URL}/fetchInventory`
+            `${process.env.REACT_APP_BASE_URL}/fetchInventory`
           ),
           axios.get(
-            `${process.env.BASE_URL}/fetchDrinks`
+            `${process.env.REACT_APP_BASE_URL}/fetchDrinks`
           ),
         ])
         .then(

@@ -54,7 +54,7 @@ const MenuForm = (props) => {
     };
 
     axios
-      .post(`${process.env.BASE_URL}/addDrink`, {
+      .post(`${process.env.REACT_APP_BASE_URL}/addDrink`, {
         customDrinkInfo,
       })
       .then((res) => {

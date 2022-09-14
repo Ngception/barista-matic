@@ -6,7 +6,7 @@ import PaymentForm from './Form';
 
 const Payment = () => {
   return (
-    <Elements stripe={loadStripe(process.env.TEST_STRIPE_KEY)}>
+    <Elements stripe={loadStripe(process.env.REAC_APP_TEST_STRIPE_KEY)}>
       <PaymentForm />
     </Elements>
   );
