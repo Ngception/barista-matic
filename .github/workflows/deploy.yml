@@ -25,3 +25,7 @@ jobs:
           args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          ORIGIN: ${{ secrets.ORIGIN }}
+          REACT_APP_BASE_URL: ${{ secrets.REACT_APP_BASE_URL }}
+          REACT_APP_HOME_BACKGROUND: ${{ secrets.REACT_APP_HOME_BACKGROUND }}
+          REACT_APP_TEST_STRIPE_KEY: ${{ secrets.REACT_APP_TEST_STRIPE_KEY }}
