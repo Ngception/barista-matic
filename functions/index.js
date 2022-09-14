@@ -5,7 +5,7 @@ let db = admin.firestore();
 const functions = require('firebase-functions');
 const config = functions.config();
 
-const cors = require('cors')({ origins: true });
+const cors = require('cors')({ origin: process.env.ORIGIN });
 const stripeKey = config.stripe.key;
 const stripe = require('stripe')(stripeKey);
 
@@ -189,7 +189,7 @@ exports.addDrink = functions.https.onRequest((request, response) => {
         const newDocument = {
           ...customDrinkInfo,
           link,
-          image: 'https://i.imgur.com/5knK83u.jpg',
+          image: process.env.NEW_DRINK_IMAGE,
           custom_drink: true,
         };
 

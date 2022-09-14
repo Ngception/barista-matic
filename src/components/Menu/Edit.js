@@ -16,7 +16,7 @@ const Edit = () => {
     const fetchIngredients = () => {
       axios
         .get(
-          'https://us-central1-barista-matic.cloudfunctions.net/fetchInventory'
+          `${process.env.REACT_APP_BASE_URL}/fetchInventory`
         )
         .then((res) => {
           const ingredients = res.data.data;
