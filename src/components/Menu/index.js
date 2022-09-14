@@ -19,10 +19,10 @@ const Menu = () => {
       axios
         .all([
           axios.get(
-            'https://us-central1-barista-matic.cloudfunctions.net/fetchInventory'
+            `${process.env.BASE_URL}/fetchInventory`
           ),
           axios.get(
-            'https://us-central1-barista-matic.cloudfunctions.net/fetchDrinks'
+            `${process.env.BASE_URL}/fetchDrinks`
           ),
         ])
         .then(

@@ -54,7 +54,7 @@ const MenuForm = (props) => {
     };
 
     axios
-      .post('https://us-central1-barista-matic.cloudfunctions.net/addDrink', {
+      .post(`${process.env.BASE_URL}/addDrink`, {
         customDrinkInfo,
       })
       .then((res) => {

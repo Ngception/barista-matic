@@ -8,7 +8,7 @@ const Homepage = () => {
     <div className='home-main w-100 vh-100'>
       <img
         className='w-100 h-100'
-        src='https://images.pexels.com/photos/374885/pexels-photo-374885.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        src={process.env.HOME_BACKGROUND}
         alt='bg'
       />
       <div className='home-overlay w-100 h-100'></div>
