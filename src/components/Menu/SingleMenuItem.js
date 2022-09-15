@@ -52,7 +52,7 @@ const SingleMenuItem = (props) => {
     cartCtx.total = price;
     cartCtx.submitHandler = async () => {
       return await axios.post(
-        'https://us-central1-barista-matic.cloudfunctions.net/decrementInventory',
+        `${process.env['REACT_APP_BASE_URL']}/decrementInventory`,
         {
           cartItems: view,
         }

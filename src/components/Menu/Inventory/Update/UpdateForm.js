@@ -30,7 +30,7 @@ const InventoryForm = (props) => {
     cartCtx.total = total;
     cartCtx.submitHandler = async () => {
       return await axios.post(
-        'https://us-central1-barista-matic.cloudfunctions.net/addInventory',
+        `${process.env['REACT_APP_BASE_URL']}/addInventory`,
         {
           ingredientsToUpdate: updatedInventory,
         }
