@@ -39,7 +39,7 @@ const PaymentForm = (props) => {
       }
 
       const res = await axios.post(
-        'https://us-central1-barista-matic.cloudfunctions.net/stripePayment',
+        `${process.env['REACT_APP_BASE_URL']}/stripePayment`,
         {
           amount: Math.round(total * 100),
         }
